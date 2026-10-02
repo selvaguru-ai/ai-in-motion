@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn AI by moving words, following attention, finding document answers, and running an agent. Simple English. Interactive lessons.">
+  <meta name="theme-color" content="#123d34">
+  <title>AI, in motion — A visual learning playground</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23123d34'/%3E%3Cpath d='M10 28L20 10l10 18M14 22h12' fill='none' stroke='%23c6f27b' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script src="lessons.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to lesson</a>
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="#embeddings"><span class="brand-mark">ai</span><span>AI, in motion<span class="brand-sub">THE VISUAL PLAYGROUND</span></span></a>
+  <div class="course-label">YOUR LEARNING PATH <span>14 lessons</span></div>
+  <nav id="lesson-nav" aria-label="Lessons"></nav>
+  <div class="side-note"><span class="tiny-symbol">✳</span><p>Small lessons.<br>Big ideas.<br><strong>Learn by trying.</strong></p></div>
+  <div class="progress-label"><span>Your progress</span><span id="progress-text">0 / 14</span></div>
+  <progress id="progress" max="14" value="0" aria-label="Completed lessons"></progress>
+</aside>
+<div class="workspace">
+  <header class="topbar"><button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="sidebar" aria-label="Open lesson menu">☰</button><div id="breadcrumb">MODEL BASICS <span>/</span> EMBEDDINGS</div><div class="top-meta"><span class="small-orbit">◌</span> A little less theory. A lot more trying.</div></header>
+  <main id="main" tabindex="-1">
+    <div class="lesson-heading"><div><div class="eyebrow" id="eyebrow"></div><h1 id="title"></h1><p class="intro" id="intro"></p></div><span class="lesson-number" id="lesson-number"></span></div>
+    <div class="lesson-grid">
+      <section class="playground" aria-labelledby="play-title"><div class="panel-heading"><div><span class="micro-label">THE PLAYGROUND</span><h2 id="play-title"></h2></div><span class="try-badge">Try it yourself</span></div><div id="controls" class="controls"></div><div id="visual" class="visual"></div><div class="animation-bar" id="animation-bar"><button id="play" class="play-button">Play animation</button><button id="step" class="quiet-button">Next step</button><button id="reset" class="quiet-button">Reset</button><span id="step-count"></span></div><div class="insight" aria-live="polite"><span class="insight-dot"></span><p id="insight"></p></div></section>
+      <aside class="explanation"><div class="explain-section"><span class="micro-label">THE IDEA, SIMPLY</span><div id="explanation"></div></div><div class="client-note"><span class="micro-label">SAY IT TO A CLIENT</span><p id="client"></p></div><div class="reality"><span class="micro-label">ONE THING TO REMEMBER</span><p id="caveat"></p></div></aside>
+    </div>
+    <section class="check-section" id="check-section"><div><span class="micro-label">A QUICK CHECK</span><h2 id="question"></h2></div><div id="answers" class="answers"></div><p id="feedback" aria-live="polite"></p></section>
+    <footer class="lesson-footer"><a id="source" target="_blank" rel="noopener noreferrer">Read more</a><div><button id="previous" class="quiet-button">Previous lesson</button><button id="complete" class="primary-button">Mark done & continue</button></div></footer>
+  </main>
+  <div class="site-footer">AI, in motion <span>Built for curiosity. Demos are small teaching examples, not live AI calls.</span></div>
+</div>
+</body></html>
