@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let index=0, step=0, timer=null, state={}, completed=new Set(), read=new Set();
-const words=[['cat',125,107,0],['kitten',185,85,0],['dog',100,157,0],['puppy',178,156,0],['car',398,218,1],['bus',458,186,1],['bicycle',409,278,1],['invoice',394,79,2],['payment',463,59,2],['receipt',483,115,2]];
+const words=[['cat',125,107,0],['kitten',165,85,0],['dog',100,157,0],['puppy',178,156,0],['car',398,218,1],['bus',458,186,1],['bicycle',409,278,1],['invoice',394,79,2],['payment',463,59,2],['receipt',483,115,2]];
 const colors=['#76a879','#6688c5','#cb935d'];
 function nav(){ $('lesson-nav').innerHTML=groups.map((g,gi)=>`<div class="nav-group"><p class="nav-group-title">${g.label}</p>${lessons.map((l,i)=>l.group===gi?`<a class="nav-item ${index===i?'active':''}" ${index===i?'aria-current="page"':''} href="#${l.id}"><span class="nav-index">${String(i+1).padStart(2,'0')}</span><span>${l.name}</span>${completed.has(l.id)?'<span class="done-mark" aria-label="Completed">✓</span>':''}</a>`:'').join('')}</div>`).join('');$('progress').value=completed.size;$('progress-text').textContent=`${completed.size} / ${lessons.length}`;}
 function stop(){if(timer){clearInterval(timer);timer=null;}$('play').textContent='Play animation';$('play').setAttribute('aria-pressed','false');}
